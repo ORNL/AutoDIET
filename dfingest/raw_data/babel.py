@@ -1,6 +1,6 @@
-from microflow.utils.dict_utils import clean_attributes, pretty_print_dict
-from microflow.raw_data.parser import Parser
-from microflow.raw_data.images import Images
+from ..utils.dict_utils import clean_attributes, pretty_print_dict
+from ..raw_data.parser import Parser
+from ..raw_data.images import Images
 
 # Domain scientists to add more cases here.
 parsers = [Images, Parser]

@@ -5,8 +5,8 @@ import wget
 import tika
 from tika import parser
 
-from microflow.utils.file_utils import validate_scratch_dir
-from microflow.utils.dict_utils import parse_dict
+from ..utils.file_utils import validate_scratch_dir
+from ..utils.dict_utils import parse_dict
 
 
 def _get_local_kita_jar(root_dir, version=None, verbose=False):
