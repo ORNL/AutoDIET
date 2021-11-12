@@ -1,6 +1,8 @@
-DFIngest
+AutoDIET
 ========
-Tools that assist in ingesting data into `DataFed <https://datafed.ornl.gov>`_
+AutoDIET = **Auto D**ataFed **I**ng**E**st **T**ools
+
+Tools that assist in automated ingestion of data into `DataFed <https://datafed.ornl.gov>`_
 
 Key Capabilities
 ~~~~~~~~~~~~~~~~
@@ -15,6 +17,9 @@ Key Capabilities
 
 Setting up cloud providers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Under construction**
+
+
 Dropbox
 -------
 
