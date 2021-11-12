@@ -34,16 +34,18 @@ def process_posix_coll(dir_path, coll_id, df_api=None, link_data=True,
             path to directory that can be used for scratch purposes such as
             storing thumbnails or other temporary needs.
             Default = same directory where raw data is located
-    cloud : microflow.CloudProvider, Optional
-        Initialized instance of microflow.DBox or microflow.GDrive
+    cloud : CloudProvider, Optional
+        Initialized instance of DBox or GDrive
     verbose : bool, optional
         Set to True to print statements for debugging purposes. Leave False
         otherwise. Default = False
     """
-    if not df_api:
+    if not df_api or not isinstance(df_api, API):
         df_api = API()
 
     json_path = None
+    web_md = dict()
+
     for file_name in os.listdir(dir_path):
         if file_name.lower() == 'metadata.json':
             json_path = os.path.join(dir_path, file_name)
@@ -54,11 +56,10 @@ def process_posix_coll(dir_path, coll_id, df_api=None, link_data=True,
                     web_md = json.load(json_handle)
             except json.JSONDecodeError:
                 warn('Could not decode metadata. Probably not in JSON form')
-                web_md = dict()
+
     if not json_path:
         warn('metadata.json not found in {}'.format(dir_path))
         # Use an empty dictionary.
-        web_md = dict()
 
     if verbose:
         print('\tMetadata from DataFlow web interface:')
@@ -127,10 +128,10 @@ def sync_posix_dfed(local_dir, dfed_coll, max_depth=1, df_api=None,
             path to directory that can be used for scratch purposes such as
             storing thumbnails or other temporary needs.
             Default = same directory where raw data is located
-    cloud : str or microflow.CloudProvider, Optional
+    cloud : str or CloudProvider, Optional
         Path to JSON file containing necessary information for cloud hosting
         of thumbnails
-        OR Initialized instance of microflow.DBox or microflow.GDrive
+        OR Initialized instance of DBox or GDrive
     verbose : bool, optional
         Set to True to print statements for debugging purposes. Leave False
         otherwise. Default = False
