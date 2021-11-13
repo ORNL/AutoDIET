@@ -51,8 +51,7 @@ setup(
               'thumbnail', 'metadata', 'science'],
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*",
                                     "tests"]),
-    # TODO: Fix URL:
-    url='https://pycroscopy.github.io/pyUSID/about.html',
+    url='https://github.com/ORNL/AutoDIET',
     license='MIT',
     author='Suhas Somnath',
     author_email='somnaths@ornl.gov',
