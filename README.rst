@@ -1,6 +1,5 @@
-AutoDIET
-========
-AutoDIET = **Auto D**ataFed **I**ng**E**st **T**ools
+AutoDIET (AUTO Datafed IngEst Tools)
+====================================
 
 Tools that assist in automated ingestion of data into `DataFed <https://datafed.ornl.gov>`_
 
@@ -14,14 +13,3 @@ Key Capabilities
 * Hosting thumbnail images on the public cloud like Google Drive or Dropbox
 * Embedding (publicly hosted) images into the ``Description`` field of Data Records in DataFed
   such that they appear as thumbnails
-
-Setting up cloud providers
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-**Under construction**
-
-
-Dropbox
--------
-
-Google Drive
-------------
