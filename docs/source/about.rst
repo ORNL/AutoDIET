@@ -1,7 +1,7 @@
 ========
 AutoDIET
 ========
-AutoDIET = **Auto D**ataFed **I**ng**E**st **T**ools
+AutoDIET = AUTO Datafed IngEst Tools
 
 Tools that assist in automated ingestion of data into `DataFed <https://datafed.ornl.gov>`_
 
