@@ -12,13 +12,12 @@ requirements = [
     'datafed',
     'h5py',
     'numpy',
-    'tarfile',
 
     'tika',
     'wget',
 
-    'imghdr',
     'pillow',
+    'matplotlib',
 
     'dropbox',
     'google-api-python-client',
